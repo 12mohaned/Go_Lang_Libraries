@@ -9,6 +9,7 @@ import ("fmt"
 func main(){
 fmt.Println("Welcome to the library of Go this is a personal project where i implement methods for Go library feel free to add ",
 "any idea of yours or to use any method :=) ")
+
 }
 /* Convert a 2D matrix to a transpose
 	Complexity : O(n**2)
@@ -27,7 +28,7 @@ return matrix
 
 /* Count the number of primenumbers between 1 and n 
 	Complexity : O(Log(n)*N)
-	Idea : Sieve of Eratosthenes
+	Idea : Sieve of EratosthenesCal
 */
 func Calculate_prime(n int)int {
 	var count int
@@ -52,4 +53,32 @@ count++
 }
 }
 return count
+}
+/* Sorting Arrays of numbers
+ complexity of O(n+m)
+ Idea : Counting Sort 
+*/
+func sort(Array[1000000]int)[] int{
+	var indices[1000000]int
+	max := Array[0]
+	var i,j int
+for i=0; i <  1000000; i++ {
+	if(max < Array[i]){
+	max = Array[i]	
+	}
+	}
+new_Array := Array[0:max]
+for i =0 ; i < max; i++ {
+if(new_Array[i] != 0){
+indices[new_Array[i]]++
+}
+}
+for i=0; i <= max; i++ {
+	for x := indices[i]; x > 0; x-- {
+	new_Array[j] = i;
+	indices[i]--
+	j++
+}
+}
+return new_Array
 }
