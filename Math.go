@@ -3,18 +3,16 @@ Method(s) of Math Library Implemented and supporting Go-Lang Language
 */
 package main
 import ("fmt"
-		"math"	
+		"math"
 	)
-
+		
 func main(){
 fmt.Println("Welcome to the library of Go this is a personal project where i implement methods for Go library feel free to add ",
 "any idea of yours or to use any method :=) ")
-
 }
-/* Convert a 2D matrix to a transpose
-	Complexity : O(n**2)
-	Idea : transpose Algorithm
-*/func doubel_Matrix_Transpoe (matrix[2][2] int) [2][2]int{
+
+
+func doubel_Matrix_Transpoe(matrix[2][2] int) [2][2]int {
 var i,j,temp int;
 for i=0; i < 2;i++ {
 for j=j+1;j < 2;j++ {
